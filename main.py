@@ -1,7 +1,8 @@
 import csv
 import pandas
 from bokeh.plotting import figure
-from bokeh.io import output_file, show
+from bokeh.io import output_file, show, save
+from bokeh.layouts import column
 import glob
 '''
 Created by Sebastian Pajak
@@ -188,11 +189,7 @@ def plotting_data():
     p3.yaxis.axis_label = "Residuum"
     p4.vbar(x=x4, top=y4, width=0.05, color="Black")
     p4.xgrid.grid_line_color = None
-    show(p1)
-    show(p2)
-    show(p3)
-    show(p4)
-
+    show(column(p4, p1, p2, p3))
 
 if __name__ == "__main__":
     matrix = define_matrix()
