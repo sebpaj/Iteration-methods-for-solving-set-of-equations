@@ -1,0 +1,4 @@
+Method,Iterations
+Jacobi,73
+Gauss-Siedl,40
+SOR 1.2,23
